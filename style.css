@@ -6,13 +6,32 @@
   --background-color: #FFFFFF;
 }
 
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
+/* Hide the scrollbar */
+.no-scroll-bar::-webkit-scrollbar {
+  width: 0.2rem;
+   /* Set the width to a very small value */
+}
+
+/* Optional: Customize scrollbar track and thumb appearance */
+.no-scroll-bar::-webkit-scrollbar-track {
+  background: transparent; /* Track color */
+}
+
+.no-scroll-bar::-webkit-scrollbar-thumb {
+  background: rgba(249, 244, 244, 0.2); /* Thumb color */
+}
+
+
 body {
+  scroll-behavior: smooth;
   background-color: #30325b
    !important;
     overflow-x: hidden !important;
@@ -83,17 +102,7 @@ header {
     transform: scale(1.2);
     transition: all 0.4s ease;
   }
-  
-  .nav-links a.active {
-    /* background-color: rgba(255, 255, 255, 0.2); */
-    color: var(--accent-color);
-  }
-  
-  .nav-links a:active {
-    transform: scale(0.9);
-    transition: all 0.3s ease;
-  }
-  
+/*    */
 .hamburger-menu {
   display: none;
   flex-direction: column;
@@ -519,16 +528,19 @@ header {
 }
 
 .skill-card {
-    /* border: 1px solid var(--accent-color); */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  width: 47%;
+  /* border: 1px solid var(--accent-color); */
   background-color: rgba(255, 255, 255, 0.1);
   border-radius: 12px;
   padding: 20px;
   text-align: center;
   margin: 0 10px;
   transition: transform 0.3s, box-shadow 0.3s;
-  min-height: 300px;
+  min-height: 400px;
 }
-
 .skill-card:hover {
   transform: translateY(-5px);
   box-shadow: 0 4px 10px rgba(237, 235, 235, 0.7);
@@ -577,6 +589,10 @@ header {
  .Skills-section{
     padding: 0;
  }   
+ .skill-card{
+  width: 100%;
+  min-height: 200px;
+ }
 }
 
 @media (max-width: 638px) {
@@ -848,4 +864,12 @@ header {
   }
   .btn:active{
     transform: scale(0.9);
+  }
+
+  a{
+    text-decoration: none;
+  }
+
+  .skill-card p{
+    text-align: start;
   }
