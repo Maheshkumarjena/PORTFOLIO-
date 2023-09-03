@@ -677,6 +677,11 @@ header {
     transition: .4s;
     
   }
+
+.testimonial-form button:active{
+  transform:scale(0.9);
+  transition:.4s;
+}
   
 
   /* CONTACT SECTION */
