@@ -4,11 +4,12 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>my Portfolio</title>
+  <title>Portfolio version 1.0 </title>
   <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
     integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
 </head>
 
 <body>
@@ -31,12 +32,11 @@
           <p>MKJ DESIGNS</p>
         </div>
         <nav class="nav-links">
-
           <!-- navigation bar  -->
-          <a href="#Home">Home</a>
-          <a href="#Projects">Projects</a>
-          <a href="#Skills">Skills</a>
-          <a href="#Contact">Contact</a>
+          <a onclick="closeHamburger()" href="#Home">Home</a>
+          <a onclick="closeHamburger()" href="#Projects">Projects</a>
+          <a onclick="closeHamburger()" href="#Skills">Skills</a>
+          <a onclick="closeHamburger()" href="#Contact">Contact</a>
         </nav>
         <div class="hamburger-menu">
           <div class="bar"></div>
@@ -376,9 +376,9 @@
       </div>
       <h2 style="font-size: 30px; color:#00CC6A; padding-bottom:40px ">Leave a Testimonial</h2>
       <div class="testimonial-form">
-        <textarea id="testimonialText" placeholder="Enter your feedback"></textarea>
+        <textarea style="overflow-y: scroll;" id="testimonialText" placeholder="Enter your feedback"></textarea>
         <input type="text" id="authorName" placeholder="Your Name">
-        <button id="submitTestimonial">Submit</button>
+        <button onclick="submitTestimonial()"   id="submitTestimonial">Submit</button>
       </div>
     </section>
 
@@ -399,15 +399,14 @@
           <h3>Email</h3>
           <p><a href="mailto:maheshkumarjena46@gmail.com">maheshkumarjena46@gmail.com</a></p>
         </div>
-
-<div class="contact-card">
-  <div class="contact-icon">
-    <i class="icon fas fa-phone"></i>
-  </div>
-  <h3>Phone</h3>
-  <p><a href="tel:+916372552376">+916372552376</a></p>
-</div>
-
+        <div class="contact-card">
+          <div class="contact-icon">
+            <i class="icon fas fa-phone"></i>
+          </div>
+          <h3>Phone</h3>
+          <p><a href="tel:+916372552376">+916372552376</a></p>
+        </div>
+        
 
 
 
@@ -461,6 +460,6 @@
   </body>
 
   </html>
-</body>
+
 
 </html>
