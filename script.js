@@ -76,6 +76,8 @@ function submitTestimonial() {
      setTimeout(()=>{
       form.removeChild(creatingElem);
      },5000)
+     textArea.value='';
+     authorName.value='';
   }
 
 }
